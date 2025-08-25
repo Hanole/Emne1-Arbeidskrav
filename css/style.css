@@ -183,7 +183,13 @@ nav ul li a:hover img {
     display: flex;
     align-items: center;
     gap: 5px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.skills-skill:hover {
+    transform: scale(1.1);
+}
+
 
 .techs-img {
     width: 32px;
