@@ -50,7 +50,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-image: url('/images/syntax-background3.png');
+    background-image: url('/images/navbar/syntax-background3.png');
     background-repeat: repeat;
     background-size: 1800px 1200px;
     animation: moveBg 90s linear infinite;
@@ -166,4 +166,25 @@ nav ul li a:hover img {
 .box3 {
     grid-column: 1 / span 2;
     grid-row: 2;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-skill {
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background: rgba(153,153,153,0.4);
+    border-radius: 5px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.techs-img {
+    width: 32px;
 }
