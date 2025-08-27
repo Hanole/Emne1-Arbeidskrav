@@ -1,56 +1,109 @@
 <!DOCTYPE html>
 <html lang="no">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Profil</title>
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-        <div class="partial-background"></div>
-        <div id="body-wrapper">
-            <div id="header-wrapper">
-                    <nav id="nav-bar">
-                        <a href="https://cat-bounce.com/">
-                            <img class="pizzacat" src="images/navbar/pizzacat.gif">
-                            </a>
-                        <ul>
-                            <li>
-                                <a href="/index.html">
-                                    <!-- mangler IMG -->
-                                    <span>&lt;home&gt;</span>
-                                </a> 
-                            </li>
-                            <li>
-                                <a id="om-meg" href="/om.html">
-                                    <img src="images/navbar/pixelartMeWhite2.png" alt="pixelated version of me">
-                                    <span>&lt;om meg&gt;</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a id="hobbies" href="/hobby.html">
-                                    <img src="/images/navbar/pixelHobbiesBackground.png" alt="my hobbies: keyboard, book, movies and music">
-                                    <span>&lt;hobbyer&gt;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav> 
-                </div>
-            <div id="main-wrapper">
-            <main class="main-box">
-                <div class="grid-container">
-                    <div class="box box1">
-                        <h1>Dette er hobbysiden</h1>
-                        <p> Dette er min personlige hjemmeside. Her finner du litt informasjon om meg, min bakgrunn og mine interesser.</p>
-                        <img src="" alt="Dette er meg!">
-                    </div>
-                    <div class="box box2">
-
-                    </div>
-                    <div class="box box3"></div>
-                </div>
-            </main>
-            </div>
+  <head>
+    <!-- Hei på du som titter innom.   -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nettsiden til Ole-Magnus Stallvik, nåværende student på frontendutvikling hos Gokstad Akademiet.">
+    <meta name="author" content="Ole-Magnus">
+    <title>Mine hobbyer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font: Space Grotesk fra Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="partial-background"></div>
+    <div id="body-wrapper">
+      <header id="header-wrapper">
+        <!-- Navigasjonsmeny -->
+        <nav id="nav-bar" aria-label="Navigasjonsmeny">
+          <a href="https://cat-bounce.com/">
+            <img class="pizzacat" src="images/navbar/pizzacat.gif" alt="pizzacat" />
+          </a>
+          <ul>
+            <li>
+              <a href="/index.html">
+                <!--HUSK: mangler IMG -->
+                <span>&lt;home&gt;</span>
+              </a>
+            </li>
+            <li>
+              <a id="om-meg" href="/om.html">
+                <img
+                  src="images/navbar/pixelartMeWhite2.png"
+                  alt="pixelated version of me"
+                />
+                <span>&lt;om meg&gt;</span>
+              </a>
+            </li>
+            <li>
+              <a id="hobbies" href="/hobby.html">
+                <img
+                  src="/images/navbar/pixelHobbiesBackground.png"
+                  alt="my hobbies: keyboard, book, movies and music"
+                />
+                <span>&lt;hobbyer&gt;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main-wrapper">
+        <div class="main-box">
+          <section class="grid-container">
+            <!-- Hobby -->
+            <article class="box box1">
+              <h1>HOBBY</h1>
+              <hr />
+            </article>
+            <!-- Noe om hobbyer -->
+            <section class="box box2">
+                <h2>Hobby hobby</h2>
+                <hr />
+            </section>
+            <!-- Kontaktinformasjon + Lenker til mine sosiale medier -->
+            <footer class="box box3" aria-label="Kontaktinformasjon og lenker til sosiale medier">
+              <h2>
+                Har du et prosjekt på hjertet, spørsmål du lurer på, eller bare
+                lyst til å bli litt bedre kjent?
+              </h2>
+              <h3>Ta gjerne kontakt – jeg setter pris på en hyggelig prat.</h3>
+              <h4>
+                E-post:
+                <a href="mailto:olemagnus_stallvik@hotmail.no"
+                  >olemagnus_stallvik@hotmail.no</a
+                >
+              </h4>
+              <h4>
+                Socials:
+                <a href="https://github.com/Hanole"
+                  ><img src="/images/techicons/github-light.svg" alt="github logo"
+                /></a>
+                <a
+                  href="https://www.linkedin.com/in/ole-magnus-stallvik-84939524b/"
+                  ><img src="/images/techicons/linkedin.svg" alt="linkedin logo"
+                /></a>
+                <a href="https://letterboxd.com/Hanole/"
+                  ><img src="/images/techicons/letterboxd.png" alt="letterboxd logo"
+                /></a>
+                <a href="https://discordapp.com/users/140892746415079424"
+                  ><img src="/images/techicons/discord.svg" alt="discord logo"
+                /></a>
+                <a href="https://steamcommunity.com/profiles/76561197994983884"
+                  ><img src="/images/techicons/steam.svg" alt="steam logo"
+                /></a>
+              </h4>
+              <h6>
+                Du kan muligens nå meg ved å ringe
+                <a href="tel:45506708">45506708</a>, men etter at jeg har søkt
+                deg opp på Gulesider
+              </h6>
+            </footer>
+          </section>
         </div>
-    </body>
+      </main>
+    </div>
+  </body>
 </html>

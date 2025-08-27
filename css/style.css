@@ -1,10 +1,51 @@
+/* -----------------------------------------
+    1. Global elements
+-------------------------------------------- */
 
-/* id */
+body {
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('/images/background/BackgroundCampfireNight2.png');
+    image-rendering: pixelated;
+    background-repeat: repeat;
+    background-size: 100vw;
+    /* animation: moveBg 90s linear infinite; */
+    position: relative;
+}
+
+
+/*------------------------------------
+  2. Layout Wrappers
+------------------------------------*/
+
+    /* Gjør bakgrunnen "blurry" */
+.partial-background { 
+    background: rgb(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+}
 
 #body-wrapper {
     z-index: 2;
     position: relative;
 }
+
+#main-wrapper {
+    padding-top: 150px;
+}
+
+
+/* -----------------------------------------
+    3. Header og Navigasjon
+-------------------------------------------- */
 
 #header-wrapper {
     display: flex;
@@ -12,21 +53,16 @@
     margin-top: 15px;
 }
 
-
-#main-wrapper {
-    padding-top: 150px;
-}
-
 #nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 30px;
+    padding: 0 30px;
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 119, 255, 0.2);
-    width: 96vw;
+    width: calc(100% - 120px);
 }
 
 #nav-bar ul {
@@ -40,45 +76,7 @@
     font-weight: bold;
 }
 
-/* hoveranimations for navbar */
-#hobbies:hover span {
-    transform: rotate(-3deg) translateY(7px);
-}
-
-#om-meg:hover span {
-    transform: rotate(3deg) translateY(8px);
-}
-
-
-/* elements */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-image: url('/images/BackgroundCampfireNight2.png');
-    image-rendering: pixelated;
-    background-repeat: repeat;
-    background-size: 100vw;
-    /* animation: moveBg 90s linear infinite; */
-    position: relative;
-}
-
-@keyframes moveBg {
-    from { background-position: 0 0; }
-    to   { background-position: -2000px 0; }
-}
-
-@keyframes bounce {
-    0%   { transform: scale(1) translateY(0); }
-    20%  { transform: scale(1.1) translateY(-6px); }
-    40%  { transform: scale(0.95) translateY(6px); }
-    60%  { transform: scale(1.05) translateY(-3px); }
-    80%  { transform: scale(0.90) translateY(3px); }
-    100% { transform: scale(1) translateY(0); }
-}
-
+/*--- Nav Links ---*/
 nav ul li a {
     display: flex;
     flex-direction: column;
@@ -109,35 +107,24 @@ nav ul li a:hover img {
     transform: scale(1.2);
 }
 
-
-
-
-/* classes */
-    /* blur over the initial background */
-.partial-background { 
-    background: rgb(0, 0, 0, 0.1);
-    position: fixed;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    backdrop-filter: blur(4px);
-}
-
+/*--- Navbar Hover Animations ---*/
+#hobbies:hover span   { transform: rotate(-3deg) translateY(7px);}
+#om-meg:hover span    { transform: rotate(3deg) translateY(8px); }
 
 /* meowmeow */
 .pizzacat { 
     width: 86px;   
     height: auto;
-    padding-left: 40px;
     transition: transform 0.3s ease-in-out;
 }
 
 .pizzacat:hover {
     animation: bounce 1s;
 }
+
+/* -----------------------------------------
+    4. Main og grid
+-------------------------------------------- */
 
 .main-box {
     display: flex;
@@ -167,9 +154,14 @@ nav ul li a:hover img {
     grid-row: 2;
 }
 
+/* -----------------------------------------
+    5. Skills og Tech
+-------------------------------------------- */
+
 .skills {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .skills-skill {
@@ -194,6 +186,14 @@ nav ul li a:hover img {
     width: 32px;
 }
 
+.gif-box img {
+    width: 100%;
+}
+
+/* -----------------------------------------
+    6. Kontaktinformasjon og lenker til sosiale medier
+-------------------------------------------- */
+
 .box3 h4 {
        align-items: center;
        display: flex;
@@ -211,5 +211,27 @@ nav ul li a:hover img {
 
 .box3 a img {
     width: 32px;
-    
+    transition: transform 0.2s ease-in-out;
+    image-rendering: auto;
+}
+.box3 a img:hover {
+    transform: scale(1.1);
+}
+
+/*------------------------------------
+  7. Animasjoner
+------------------------------------*/
+
+@keyframes moveBg {
+    from { background-position: 0 0; }
+    to   { background-position: -2000px 0; }
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1) translateY(0); }
+    20%  { transform: scale(1.1) translateY(-6px); }
+    40%  { transform: scale(0.95) translateY(6px); }
+    60%  { transform: scale(1.05) translateY(-3px); }
+    80%  { transform: scale(0.90) translateY(3px); }
+    100% { transform: scale(1) translateY(0); }
 }

@@ -1,132 +1,246 @@
 <!DOCTYPE html>
 <html lang="no">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Profil</title>
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-        <div class="partial-background"></div>
-        <div id="body-wrapper">
-            <div id="header-wrapper">
-                    <nav id="nav-bar">
-                        <a href="https://cat-bounce.com/">
-                            <img class="pizzacat" src="images/navbar/pizzacat.gif">
-                            </a>
-                        <ul>
-                            <li>
-                                <a href="/index.html">
-                                    <!-- mangler IMG -->
-                                    <span>&lt;home&gt;</span>
-                                </a> 
-                            </li>
-                            <li>
-                                <a id="om-meg" href="/om.html">
-                                    <img src="images/navbar/pixelartMeWhite2.png" alt="pixelated version of me">
-                                    <span>&lt;om meg&gt;</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a id="hobbies" href="/hobby.html">
-                                    <img src="/images/navbar/pixelHobbiesBackground.png" alt="my hobbies: keyboard, book, movies and music">
-                                    <span>&lt;hobbyer&gt;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav> 
+  <head>
+    <!-- Hei på du som titter innom.   -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nettsiden til Ole-Magnus Stallvik, nåværende student på frontendutvikling hos Gokstad Akademiet.">
+    <meta name="author" content="Ole-Magnus">
+    <title>Om meg</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font: Space Grotesk fra Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="partial-background"></div>
+    <div id="body-wrapper">
+      <header id="header-wrapper">
+        <!-- Navigasjonsmeny -->
+        <nav id="nav-bar" aria-label="Navigasjonsmeny">
+          <a href="https://cat-bounce.com/">
+            <img class="pizzacat" src="images/navbar/pizzacat.gif" alt="pizzacat" />
+          </a>
+          <ul>
+            <li>
+              <a href="/index.html">
+                <!--HUSK: mangler IMG -->
+                <span>&lt;home&gt;</span>
+              </a>
+            </li>
+            <li>
+              <a id="om-meg" href="/om.html">
+                <img
+                  src="images/navbar/pixelartMeWhite2.png"
+                  alt="pixelated version of me"
+                />
+                <span>&lt;om meg&gt;</span>
+              </a>
+            </li>
+            <li>
+              <a id="hobbies" href="/hobby.html">
+                <img
+                  src="/images/navbar/pixelHobbiesBackground.png"
+                  alt="my hobbies: keyboard, book, movies and music"
+                />
+                <span>&lt;hobbyer&gt;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main-wrapper">
+        <div class="main-box">
+          <section class="grid-container">
+            <!-- "Om meg" + "Tech-icons" -->
+            <article class="box box1">
+              <h1>Om meg</h1>
+              <p>
+                Jeg har en utdanning i Filmvitenskap, hvor jeg fikk muligheten
+                til å dykket inn i film, tv og mediebransjen - et felt jeg
+                brenner for! I tillegg har jeg lang erfaring fra
+                servicebransjen, og har blant annet jobbet som daglig leder, noe
+                som har lært meg mye om ansvar, samarbeid og problemløsning.
+              </p>
+              <p>
+                Siden januar 2024 har jeg vært selvlært innen programmering og
+                brukt plattformer som Zero to Mastery, som jeg anbefaler på det
+                sterkeste. Det er en god læringsplattform som gjør det enkelt å
+                følge og forstå både teori og praksis innen koding. For tiden
+                jobber jeg fulltid som kundekonsulent innen bank og finans, samt
+                annenhver lørdag i ferskvaren på Meny. Jeg trives godt med
+                dette, men programmering har blitt min største interesse.
+              </p>
+              <p>
+                Derfor studerer jeg nå Frontend ved Gokstad Akademiet, med
+                ambisjoner om å bygge en karriere som utvikler. Mitt viktigste
+                mål er å fortsette å lære nye ting og samtidig bli bedre i det
+                jeg allerede kan. Jeg elsker å løse problemer og skape smarte
+                løsninger, og motiveres av muligheten til å bidra med noe nytt
+                hver dag. Under finner du noen av teknologiene jeg allerede har
+                litt kunnskap om, men som jeg også ønsker å bli mye flinkere i.
+              </p>
+              <hr />
+              <section class="skills">
+                <div class="skills-skill">
+                  <img
+                    class="techs-img"
+                    src="/images/techicons/javascript.svg"
+                    alt="javascript logo"
+                  />
+                  JavaScript
                 </div>
-            <div id="main-wrapper">
-            <main class="main-box">
-                <div class="grid-container">
-                    <div class="box box1">
-                        <h1>Om meg</h1>
-                        <p>Jeg har en utdanning i Filmvitenskap, hvor jeg fikk muligheten til å dykke dypt inn i film, tv og mediebransjen - et felt jeg virkelig brenner for! I tillegg har jeg lang erfaring fra servicebransjen, og har blant annet jobbet som daglig leder, noe som har lært meg mye om ansvar, samarbeid og problemløsning.</p>
-                        <p>Siden januar 2024 har jeg vært selvlært innen programmering og brukt plattformer som Zero to Mastery, som jeg anbefaler på det sterkeste. Det er en god læringsplattform som gjør det enkelt å følge og forstå både teori og praksis innen koding. For tiden jobber jeg fulltid som kundekonsulent innen bank og finans, samt annenhver lørdag i ferskvaren på Meny. Jeg trives godt med dette, men programmering har blitt min største interesse.</p>
-                        <p> Derfor studerer jeg nå Frontend ved Gokstad Akademiet, med ambisjoner om å bygge en karriere som utvikler. Mitt viktigste mål er å fortsette å lære nye ting og samtidig bli bedre i det jeg allerede kan. Jeg elsker å løse problemer og skape smarte løsninger, og motiveres av muligheten tilå bidra med noe nytt hver dag. Her er noen av teknologiene jeg allerede har litt kunnskap om, men som jeg også ønsker å bli mye flinkere i:</p>
-                    </div>
-                    <div class="box box2">
-                        <div class="skills">
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/javascript.svg">
-                                JavaScript
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/reactjs.svg">
-                                React
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/nodejs.svg">
-                                Node.Js
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/html5.svg">
-                                HTML
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/css3.svg">
-                                CSS
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/sass.svg">
-                                Sass
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/postgresql.svg">
-                                PostgreSQL
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/aws.svg">
-                                AWS
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/git.svg">
-                                Git
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/github-light.svg">
-                                Github
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/docker.svg">
-                                Docker
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/vim.svg">
-                                Vim
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/photoshop.svg">
-                                Photoshop
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/linux.svg">
-                                Linux
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/vscode.svg">
-                                VScode
-                            </div>
-                            <div class="skills-skill">
-                                <img class="techs-img" src="/images/techicons/firefox.svg">
-                                Firefox
-                            </div>
-                            <div class="skills-skill">
-                                More to come!!!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box box3">
-                        <h2>Kontakt meg</h2>
-                        <h4>E-post: <a href="mailto:olemagnus_stallvik@hotmail.no">olemagnus_stallvik@hotmail.no</a></h4>
-                        <h4>Socials:
-                            <a href="https://github.com/Hanole"><img src="/images/techicons/github-light.svg"></a>
-                        </h4>
-                        <h6>Du kan også nå meg på <a href="tlf:45506708">45506708</a>, etter at jeg har søkt deg opp Gulesider</h6>
-                    </div>
+                <div class="skills-skill">
+                  <img 
+                    class="techs-img" 
+                    src="/images/techicons/reactjs.svg" 
+                    alt="React logo"
+                  />
+                  React
                 </div>
-            </main>
-            </div>
+                <div class="skills-skill">
+                  <img 
+                    class="techs-img" 
+                    src="/images/techicons/nodejs.svg" 
+                    alt="Node.js logo"
+                    />
+                  Node.Js
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/html5.svg" alt="HTML logo" />
+                  HTML
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/css3.svg" alt="CSS logo" />
+                  CSS
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/sass.svg" alt="sass logo"/>
+                  Sass
+                </div>
+                <div class="skills-skill">
+                  <img
+                    class="techs-img"
+                    src="/images/techicons/postgresql.svg"
+                    alt="postgreSQL logo"
+                  />
+                  PostgreSQL
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/aws.svg" alt="AWS logo" />
+                  AWS
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/git.svg" alt="Git logo" />
+                  Git
+                </div>
+                <div class="skills-skill">
+                  <img
+                    class="techs-img"
+                    src="/images/techicons/github-light.svg"
+                    alt="github logo"
+                  />
+                  Github
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/docker.svg" alt="docker logo"/>
+                  Docker
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/vim.svg" alt="vim logo"/>
+                  Vim
+                </div>
+                <div class="skills-skill">
+                  <img
+                    class="techs-img"
+                    src="/images/techicons/photoshop.svg"
+                    alt="photoshop logo"
+                  />
+                  Photoshop
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/linux.svg" alt="linux logo" />
+                  Linux
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/vscode.svg" alt="VSCode logo" />
+                  VScode
+                </div>
+                <div class="skills-skill">
+                  <img class="techs-img" src="/images/techicons/firefox.svg" alt="Firefox logo"/>
+                  Firefox
+                </div>
+                <div class="skills-skill">More to come!!!</div>
+              </section>
+            </article>
+            <!-- Pixel meg og katt + "Personlig om meg" -->
+            <section class="box box2">
+              <div class="gif-box">
+                <img src="/images/navbar/sprite_wave_cat.gif" alt="pixelated version of myself waving, and a cute pixel art black cat" />
+              </div>
+              <hr />
+              <h3>Personlig om meg</h3>
+              <p>
+                Jeg er 28 år og har alltid vært nysgjerrig på det meste. Kunst,
+                film, musikk, maling, digitalkunst og bøker gir meg mye glede i
+                hverdagen, og jeg bruker gjerne fritiden på nettopp dette. Dette
+                er mer enn bare hobbyer for meg – livet blir kjipere uten!
+              </p>
+              <p>
+                Jeg trives best når det er litt fart, så kombinasjonen av
+                studier, full jobb og til og med en deltidsjobb passer meg fint.
+                Liker å ha ting gående både på jobb og ellers!
+              </p>
+              <p>
+                Jeg liker å løpe, men lidenskapen for god mat og drikke er nok
+                enda større (det blir vel helst flere kalorier inn enn ut).
+                Ellers er jeg stor fan av spillkvelder med venner – alt fra
+                kortspill til DnD. Gode øyeblikk for meg handler om å være
+                engasjert, bruke fantasien og ha det hyggelig sammen med andre.
+              </p>
+            </section>
+            <!-- Kontaktinformasjon + Lenker til mine sosiale medier -->
+            <footer class="box box3" aria-label="Kontaktinformasjon og lenker til sosiale medier">
+              <h2>
+                Har du et prosjekt på hjertet, spørsmål du lurer på, eller bare
+                lyst til å bli litt bedre kjent?
+              </h2>
+              <h3>Ta gjerne kontakt – jeg setter pris på en hyggelig prat.</h3>
+              <h4>
+                E-post:
+                <a href="mailto:olemagnus_stallvik@hotmail.no"
+                  >olemagnus_stallvik@hotmail.no</a
+                >
+              </h4>
+              <h4>
+                Socials:
+                <a href="https://github.com/Hanole"
+                  ><img src="/images/techicons/github-light.svg" alt="github logo"
+                /></a>
+                <a
+                  href="https://www.linkedin.com/in/ole-magnus-stallvik-84939524b/"
+                  ><img src="/images/techicons/linkedin.svg" alt="linkedin logo"
+                /></a>
+                <a href="https://letterboxd.com/Hanole/"
+                  ><img src="/images/techicons/letterboxd.png" alt="letterboxd logo"
+                /></a>
+                <a href="https://discordapp.com/users/140892746415079424"
+                  ><img src="/images/techicons/discord.svg" alt="discord logo"
+                /></a>
+                <a href="https://steamcommunity.com/profiles/76561197994983884"
+                  ><img src="/images/techicons/steam.svg" alt="steam logo"
+                /></a>
+              </h4>
+              <h6>
+                Du kan muligens nå meg ved å ringe
+                <a href="tel:45506708">45506708</a>, men etter at jeg har søkt
+                deg opp på Gulesider
+              </h6>
+            </footer>
+          </section>
         </div>
-    </body>
+      </main>
+    </div>
+  </body>
 </html>
