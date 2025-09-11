@@ -11,7 +11,6 @@ body {
     image-rendering: pixelated;
     background-repeat: repeat;
     background-size: 100vw;
-    /* animation: moveBg 90s linear infinite; */
     position: relative;
 }
 
@@ -110,6 +109,7 @@ nav ul li a:hover img {
 /*--- Navbar Hover Animations ---*/
 #hobbies:hover span   { transform: rotate(-3deg) translateY(7px);}
 #om-meg:hover span    { transform: rotate(3deg) translateY(8px); }
+#home:hover span   { transform: rotate(-3deg) translateY(7px);}
 
 /* meowmeow */
 .pizzacat { 
@@ -141,7 +141,9 @@ nav ul li a:hover img {
 }
 
 .box {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* max-width: 100%; */
     background: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 30px;
@@ -174,11 +176,12 @@ nav ul li a:hover img {
     display: flex;
     align-items: center;
     gap: 5px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.5s;
 }
 
 .skills-skill:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 183, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.2);
 }
 
 
@@ -195,9 +198,9 @@ nav ul li a:hover img {
 -------------------------------------------- */
 
 .box3 h4 {
-       align-items: center;
-       display: flex;
-       gap: 30px;
+    align-items: center;
+    display: flex;
+    gap: 30px;
 }
 
 .box3 a {
@@ -218,8 +221,49 @@ nav ul li a:hover img {
     transform: scale(1.1);
 }
 
+
 /*------------------------------------
-  7. Animasjoner
+    7. Topp-listene
+------------------------------------*/
+.favoritter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.favoritt-card {
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease-in-out, background-color 0.8s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.favoritt-card:hover {
+    transform: scale(1.03);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 7px 10px 2px rgba(0, 0, 0, 0.4)
+}
+
+.favoritt-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 5px;
+    image-rendering: auto;
+    display: block;
+}
+
+.favoritt-card > p {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+}
+
+
+/*------------------------------------
+  Animasjoner
 ------------------------------------*/
 
 @keyframes moveBg {

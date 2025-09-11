@@ -19,13 +19,16 @@
       <header id="header-wrapper">
         <!-- Navigasjonsmeny -->
         <nav id="nav-bar" aria-label="Navigasjonsmeny">
-          <a href="https://cat-bounce.com/">
+          <a href="https://cat-bounce.com/" target="_blank" rel="noopener noreferrer">
             <img class="pizzacat" src="images/navbar/pizzacat.gif" alt="pizzacat" />
           </a>
           <ul>
             <li>
-              <a href="/index.html">
-                <!--HUSK: mangler IMG -->
+              <a id="home" href="/index.html">
+                <img
+                  src="images/navbar/homeNav4.png"
+                  alt="pixelated homebutton"
+                />
                 <span>&lt;home&gt;</span>
               </a>
             </li>
@@ -56,12 +59,72 @@
             <!-- Hobby -->
             <article class="box box1">
               <h1>HOBBY</h1>
+              <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta a nemo officiis asperiores minima, assumenda labore voluptatem, fugiat ut beatae ipsam accusantium perferendis illo? Nemo quisquam odit eaque distinctio iure?</div>
               <hr />
             </article>
-            <!-- Noe om hobbyer -->
             <section class="box box2">
-                <h2>Hobby hobby</h2>
-                <hr />
+              <h2>Mine topp 4 filmer</h2>
+                <div class="favoritter">
+                  <div class="favoritt-card">
+                    <a href="https://letterboxd.com/film/the-salt-of-the-earth/" target="_blank" rel="noopener noreferrer">
+                      <img 
+                      src="https://a.ltrbxd.com/resized/film-poster/1/8/8/5/6/8/188568-the-salt-of-the-earth-0-1000-0-1500-crop.jpg?v=fb0d2cdb9e" 
+                      alt="The Salt of the Earth poster">
+                    </a>
+                    <p>The Salt of the Earth</p>
+                  </div>
+                  <div class="favoritt-card">
+                    <a href="https://letterboxd.com/film/the-banshees-of-inisherin/" target="_blank" rel="noopener noreferrer">
+                      <img 
+                        src="https://a.ltrbxd.com/resized/film-poster/5/9/8/8/8/2/598882-the-banshees-of-inisherin-0-1000-0-1500-crop.jpg?v=933f9af6e7" 
+                        alt="The Banshees of Inisherin poster">
+                    </a>
+                    <p>The Banshees of Inisherin</p>
+                  </div>
+                  <div class="favoritt-card">
+                    <a href="https://letterboxd.com/film/autumn-sonata/" target="_blank" rel="noopener noreferrer">
+                      <img 
+                        src="https://a.ltrbxd.com/resized/sm/upload/dr/d3/nw/gv/m4I32itPMlRWqWJamFAwFDbrBXp-0-1000-0-1500-crop.jpg?v=45433653ca" 
+                        alt="Autumn Sonata poster">
+                    </a>
+                    <p>Autumn Sonata</p>
+                  </div>
+                  <div class="favoritt-card">
+                    <a href="https://letterboxd.com/film/boogie-nights/" target="_blank" rel="noopener noreferrer">
+                      <img 
+                        src="https://a.ltrbxd.com/resized/film-poster/4/9/0/0/7/49007-boogie-nights-0-1000-0-1500-crop.jpg?v=8b2c02e252" 
+                        alt="Boogie Nights poster">
+                    </a>
+                    <p>Boogie Nights</p>
+                  </div>
+                </div>
+                <h2>Mine topp 4 bøker</h2>
+                <div class="favoritter">
+                  <div class="favoritt-card">
+                    <img 
+                      src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1671660198i/25454056.jpg"
+                      alt="The Witcher Sword of Destiny poster">
+                    <p>The Witcher: Sword of Destiny</p>
+                  </div>
+                  <div class="favoritt-card">
+                    <img 
+                      src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1558257516i/27271552.jpg"
+                      alt="Havboka poster">
+                    <p>Havboka</p>
+                  </div>
+                  <div class="favoritt-card">
+                    <img 
+                      src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1697233151i/185594432.jpg"
+                      alt="Slaughterhouse Five poster">
+                    <p>Slaughterhouse Five</p>
+                  </div>
+                  <div class="favoritt-card">
+                    <img 
+                      src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1502518360i/35074096.jpg"
+                      alt="Mythos poster">
+                    <p>Mythos: The Greek Myths Retold</p>
+                  </div>
+                </div>
             </section>
             <!-- Kontaktinformasjon + Lenker til mine sosiale medier -->
             <footer class="box box3" aria-label="Kontaktinformasjon og lenker til sosiale medier">
@@ -78,22 +141,22 @@
               </h4>
               <h4>
                 Socials:
-                <a href="https://github.com/Hanole"
-                  ><img src="/images/techicons/github-light.svg" alt="github logo"
-                /></a>
+                <a href="https://github.com/Hanole" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/techicons/github-light.svg" alt="github logo"/>
+                </a>
                 <a
-                  href="https://www.linkedin.com/in/ole-magnus-stallvik-84939524b/"
-                  ><img src="/images/techicons/linkedin.svg" alt="linkedin logo"
-                /></a>
-                <a href="https://letterboxd.com/Hanole/"
-                  ><img src="/images/techicons/letterboxd.png" alt="letterboxd logo"
-                /></a>
-                <a href="https://discordapp.com/users/140892746415079424"
-                  ><img src="/images/techicons/discord.svg" alt="discord logo"
-                /></a>
-                <a href="https://steamcommunity.com/profiles/76561197994983884"
-                  ><img src="/images/techicons/steam.svg" alt="steam logo"
-                /></a>
+                  href="https://www.linkedin.com/in/ole-magnus-stallvik-84939524b/" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/techicons/linkedin.svg" alt="linkedin logo"/>
+                </a>
+                <a href="https://letterboxd.com/Hanole/" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/techicons/letterboxd.png" alt="letterboxd logo"/>
+                </a>
+                <a href="https://discordapp.com/users/140892746415079424" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/techicons/discord.svg" alt="discord logo"/>
+                </a>
+                <a href="https://steamcommunity.com/profiles/76561197994983884" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/techicons/steam.svg" alt="steam logo"/>
+                </a>
               </h4>
               <h6>
                 Du kan muligens nå meg ved å ringe
@@ -103,6 +166,7 @@
             </footer>
           </section>
         </div>
+        <!--  -->
       </main>
     </div>
   </body>
