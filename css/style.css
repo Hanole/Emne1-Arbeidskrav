@@ -23,7 +23,7 @@ body {
 .partial-background { 
     background: rgb(0, 0, 0, 0.1);
     position: fixed;
-    z-index: 1;
+    z-index: 0;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 #body-wrapper {
-    z-index: 2;
+    z-index: 1;
     position: relative;
 }
 
@@ -45,18 +45,19 @@ body {
 /* -----------------------------------------
     3. Header og Navigasjon
 -------------------------------------------- */
-
 #header-wrapper {
     display: flex;
     justify-content: center;
+    position: relative;
     margin-top: 15px;
+    z-index: 3;
 }
 
 #nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 2rem;
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
@@ -81,7 +82,7 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 8px;
+    padding: 8px; 
     transition: none;
     color: white;
 }
@@ -130,7 +131,8 @@ nav ul li a:hover img {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 30px;
+    margin: 2rem;
+    min-width: 500px;
 }
 
 .grid-container {
@@ -141,19 +143,59 @@ nav ul li a:hover img {
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
-    /* max-width: 100%; */
+    display: absolute;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 30px;
-    /* border: solid rgba(0, 0, 0, 0.9) 2px; */
+    padding: 2rem;
     border-radius: 5px;
+    overflow: auto;
+    
 }
 
 .box3 {
     grid-column: 1 / span 2;
     grid-row: 2;
+}
+
+
+.gif-box img {
+    width: 100%;
+    min-width: 300px;
+}
+
+/* TV med bildeserie */
+
+.tv-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 2.5rem auto;
+    aspect-ratio: 5 / 4;
+}
+
+.tv-skjerm, .tv-ramme {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    
+}
+
+.tv-skjerm {
+  z-index: 1;
+  left: 10%;
+  top: 6%;
+  width: 53%;
+  /* height: 80%; */
+  image-rendering: auto;
+  min-width: 188px;
+}
+.tv-ramme {
+  z-index: 2;
+  object-fit: cover;
+  min-width: 355px;
 }
 
 /* -----------------------------------------
@@ -189,9 +231,7 @@ nav ul li a:hover img {
     width: 32px;
 }
 
-.gif-box img {
-    width: 100%;
-}
+
 
 /* -----------------------------------------
     6. Kontaktinformasjon og lenker til sosiale medier
@@ -203,12 +243,12 @@ nav ul li a:hover img {
     gap: 30px;
 }
 
-.box3 a {
+a {
     text-decoration: none;
-    color: white;
+    color: rgb(80, 150, 255);
 }
 
-.box3 a:hover {
+a:hover {
     text-decoration: underline;
 }
 
@@ -223,17 +263,18 @@ nav ul li a:hover img {
 
 
 /*------------------------------------
-    7. Topp-listene
+    7. Topp-listene + Card
 ------------------------------------*/
 .favoritter {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1.5rem;
     justify-content: center;
-    align-items: stretch;
+    /* align-items: stretch; */
 }
 
 .favoritt-card {
+    max-width: 15rem;
     border-radius: 5px;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.5);
@@ -248,16 +289,15 @@ nav ul li a:hover img {
 
 .favoritt-card img {
     width: 100%;
-    height: 220px;
+    height: 10rem;
     object-fit: contain;
     border-radius: 5px;
     image-rendering: auto;
     display: block;
 }
 
-.favoritt-card > p {
+.favoritt-card p {
     text-align: center;
-    margin-top: 1.2rem;
     font-size: 1rem;
 }
 
@@ -278,4 +318,47 @@ nav ul li a:hover img {
     60%  { transform: scale(1.05) translateY(-3px); }
     80%  { transform: scale(0.90) translateY(3px); }
     100% { transform: scale(1) translateY(0); }
+}
+
+
+/*------------------------------------
+  Media Querys
+------------------------------------*/
+
+@media (max-width: 1650px) {
+    .favoritter {
+        grid-template-columns: repeat(2, minmax(10rem, 1fr));
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1550px) {
+    .tv-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .box {
+        max-height: 600px;
+    }
+}
+
+@media (max-width: 850px) {
+    .main-box {
+        min-width: 786px;
+    }
+} 
+
+@media (max-width: 810px) {
+    .tv-skjerm {
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 585px) {
+    #header-wrapper {
+        min-width: 528px;
+    }
 }

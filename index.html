@@ -60,21 +60,22 @@
             <article class="box box1">
                 <h1>Velkommen! Mitt navn er Ole-Magnus.</h1>
                 <p> Dette er min personlige hjemmeside. Her finner du litt informasjon om meg, min bakgrunn og mine interesser.</p>
-                <img src="" alt="Dette er meg!">
-              <hr />
+                <div class="tv-container">
+                  <img id="tv-skjerm" src="" class="tv-skjerm" alt="varierte bilder av meg selv i tv-skjermen">
+                  <img class="tv-ramme" src="/images/meg/egoWatchingHimself.png" alt="Dette er meg!">
+                </div>
             </article>
-            <!-- infoinfo -->
             <section class="box box2">
                 <h2>Siste nytt</h2>
                   <ul>
                     <li>
-                      <strong>Frontend-studier:</strong> Akkurat nå studerer jeg frontend ved Gokstad Akademiet, og jobber med et nytt React-prosjekt på fritiden.
+                      <p><strong>Frontend-studier:</strong> Akkurat nå studerer jeg frontend ved <a href="https://gokstadakademiet.no/" target="_blank"> Gokstad Akademiet</a>, og lager denne nettsiden med bruk av HTML og CSS.</p>
                     </li>
                     <li>
-                      <strong>Spillutvikling:</strong> Jeg tester ut Godot og lager et pikselspill hvor pizzakatter er hovedkarakterer – følg med!
+                      <p><strong>Spillutvikling:</strong> Jeg tester ut Godot og lager pikselgrafikk til et enkelt, progresjonsbasert arena shooter-spill. Spillet blir et hobbyprosjekt der jeg eksperimenterer.</p>
                     </li>
                     <li>
-                      <strong>Musikk:</strong> 
+                      <p><strong>Prosjekt:</strong> Jeg utvikler en quiz-app som bruker AI til å lage unike spørsmål innenfor de kategoriene man velger. Målet er at brukeren kun trenger å velge tema, så tar AI seg av resten!</p>
                     </li>
                   </ul>
                   <hr />
@@ -126,4 +127,35 @@
       </main>
     </div>
   </body>
+
+  <!-- Jeg gjemmer en liten script her. -->
+  <script>
+    const images = [
+      "images/meg/bilde1.png",
+      "images/meg/bilde2.png",
+      "images/meg/bilde3.png",
+      "images/meg/bilde4.png",
+      "images/meg/bilde5.png",
+      "images/meg/bilde6.png",
+      "images/meg/bilde7.png",
+      "images/meg/bilde8.png",
+      "images/meg/bilde9.png",
+      "images/meg/bilde10.png",
+      "images/meg/bilde11.png",
+      "images/meg/bilde12.png",
+      "images/meg/bilde13.png",
+      "images/meg/bilde14.png",
+      "images/meg/bilde15.png",
+      "images/meg/bilde16.png",
+      "images/meg/bilde17.png",
+      "images/meg/bilde18.png"
+    ];
+    let index = 0;
+    const tvSkjerm = document.getElementById("tv-skjerm");
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      tvSkjerm.src = images[index];
+    }, 1000);
+  </script>
 </html>
