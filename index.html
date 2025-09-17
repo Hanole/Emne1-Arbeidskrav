@@ -15,10 +15,10 @@
   </head>
   <body>
     <div class="partial-background"></div>
-    <div id="body-wrapper">
-      <header id="header-wrapper">
+    <div class="body-wrapper">
+      <header class="header-wrapper">
         <!-- Navigasjonsmeny -->
-        <nav id="nav-bar" aria-label="Navigasjonsmeny">
+        <nav class="nav-bar" aria-label="Navigasjonsmeny">
           <a href="https://cat-bounce.com/" target="_blank" rel="noopener noreferrer">
             <img class="pizzacat" src="images/navbar/pizzacat.gif" alt="pizzacat" />
           </a>
@@ -53,36 +53,42 @@
           </ul>
         </nav>
       </header>
-      <main id="main-wrapper">
+      <main class="main-wrapper">
         <div class="main-box">
           <section class="grid-container">
-            <!-- Landingpage, MEG! -->
             <article class="box box1">
                 <h1>Velkommen! Mitt navn er Ole-Magnus.</h1>
-                <p> Dette er min personlige hjemmeside. Her finner du litt informasjon om meg, min bakgrunn og mine interesser.</p>
+                <p>Her finner du informasjon om meg, mine interesser og hva jeg holder på med – utviklet som arbeidskrav ved Gokstad Akademiet. Jeg må innrømme at jeg ikke tenkte over hvor egosentrisk pikselgrafikken under faktisk ble før det hele var ferdig. </p>
                 <div class="tv-container">
                   <img id="tv-skjerm" src="" class="tv-skjerm" alt="varierte bilder av meg selv i tv-skjermen">
                   <img class="tv-ramme" src="/images/meg/egoWatchingHimself.png" alt="Dette er meg!">
                 </div>
             </article>
             <section class="box box2">
+                <h2>Hva finner du her?</h2>
+                    <p>
+                    Nettsiden gir deg en oversikt over hvem jeg er, hva jeg brenner for, og hva jeg driver med – fra studier og jobb til hobbyer og prosjekter. Kontakt meg gjerne om du vil diskutere noe eller bli bedre kjent!
+                    </p>
+                <hr />
                 <h2>Siste nytt</h2>
                   <ul>
                     <li>
                       <p><strong>Frontend-studier:</strong> Akkurat nå studerer jeg frontend ved <a href="https://gokstadakademiet.no/" target="_blank"> Gokstad Akademiet</a>, og lager denne nettsiden med bruk av HTML og CSS.</p>
                     </li>
                     <li>
-                      <p><strong>Spillutvikling:</strong> Jeg tester ut Godot og lager pikselgrafikk til et enkelt, progresjonsbasert arena shooter-spill. Spillet blir et hobbyprosjekt der jeg eksperimenterer.</p>
+                      <p><strong>Spillutvikling:</strong> Jeg tester ut Godot og lager pikselgrafikk til et enkelt, progresjonsbasert arena shooter-spill. Spillet blir et hobbyprosjekt for læring og eksperimentering.</p>
                     </li>
                     <li>
                       <p><strong>Prosjekt:</strong> Jeg utvikler en quiz-app som bruker AI til å lage unike spørsmål innenfor de kategoriene man velger. Målet er at brukeren kun trenger å velge tema, så tar AI seg av resten!</p>
                     </li>
+                    <li>
+                      <p><strong>Bøker:</strong> Akkurat nå leser jeg "Crime and Punishment" av Fjodor Dostojevskij og "Catch 22" av Joseph Heller.</p>
+                    </li>
+                    <li>
+                      <p><strong>Linux:</strong> Jeg lærer meg hvordan man kan bruke Linux til å sette opp egen lagrings- og skyløsning, med hjelp av Docker og Filebrowser. Gjerne kom med tips til sikker oppsett!</p>
+                    </li>
                   </ul>
                   <hr />
-                  <h2>Hva finner du her?</h2>
-                    <p>
-                    Nettsiden gir deg en oversikt over hvem jeg er, hva jeg brenner for, og hva jeg driver med – fra studier og jobb til hobbyer og prosjekter. Kontakt meg gjerne om du vil diskutere noe eller bli bedre kjent!
-                    </p>
             </section>
             <!-- Kontaktinformasjon + Lenker til mine sosiale medier -->
             <footer class="box box3" aria-label="Kontaktinformasjon og lenker til sosiale medier">
@@ -156,6 +162,6 @@
     setInterval(() => {
       index = (index + 1) % images.length;
       tvSkjerm.src = images[index];
-    }, 1000);
+    }, 500);
   </script>
 </html>

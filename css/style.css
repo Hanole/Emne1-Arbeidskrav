@@ -6,12 +6,10 @@ body {
     font-family: "Space Grotesk", sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     background-image: url('/images/background/BackgroundCampfireNight2.png');
     image-rendering: pixelated;
-    background-repeat: repeat;
     background-size: 100vw;
-    position: relative;
+    overflow: auto;
 }
 
 
@@ -26,34 +24,31 @@ body {
     z-index: 0;
     width: 100vw;
     height: 100vh;
-    top: 0;
-    left: 0;
-    pointer-events: none;
     backdrop-filter: blur(4px);
 }
 
-#body-wrapper {
+.body-wrapper {
     z-index: 1;
     position: relative;
 }
 
-#main-wrapper {
-    padding-top: 150px;
+.main-wrapper {
+    padding-top: 9rem;
 }
 
 
 /* -----------------------------------------
     3. Header og Navigasjon
 -------------------------------------------- */
-#header-wrapper {
+.header-wrapper {
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: 15px;
+    top: 1rem;
     z-index: 3;
 }
 
-#nav-bar {
+.nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,16 +57,16 @@ body {
     background: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 119, 255, 0.2);
-    width: calc(100% - 120px);
+    width: calc(100% - 8rem);
 }
 
-#nav-bar ul {
+.nav-bar ul {
     list-style-type: none;
     display: flex;
-    gap: 30px;
+    gap: 2rem;
 }
 
-#nav-bar a {
+.nav-bar a {
     text-decoration: none;
     font-weight: bold;
 }
@@ -82,22 +77,16 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 8px; 
-    transition: none;
+    padding: 0.5rem; 
     color: white;
 }
 
 nav ul li a span {
-    display: block;
     transition: transform 0.3s ease-in-out;
 }
 
 nav ul li a img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 64px; 
-    height: 64px;
+    width: 4rem; 
     image-rendering: pixelated;
     margin-bottom: 6px;
     transition: transform 0.3s ease-in-out;
@@ -114,8 +103,7 @@ nav ul li a:hover img {
 
 /* meowmeow */
 .pizzacat { 
-    width: 86px;   
-    height: auto;
+    width: 6rem;   
     transition: transform 0.3s ease-in-out;
 }
 
@@ -128,18 +116,13 @@ nav ul li a:hover img {
 -------------------------------------------- */
 
 .main-box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     margin: 2rem;
-    min-width: 500px;
 }
 
 .grid-container {
     display: grid;
-    gap: 20px;
+    gap: 1.5rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: auto auto;
 }
 
 .box {
@@ -149,7 +132,13 @@ nav ul li a:hover img {
     padding: 2rem;
     border-radius: 5px;
     overflow: auto;
-    
+}
+
+
+/* Hover-effekten er etter footer a:hover */
+.box2 a {
+    text-decoration: none;
+    color: rgb(80, 150, 255);
 }
 
 .box3 {
@@ -160,27 +149,19 @@ nav ul li a:hover img {
 
 .gif-box img {
     width: 100%;
-    min-width: 300px;
 }
 
 /* TV med bildeserie */
-
 .tv-container {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 25rem;
     margin: 2.5rem auto;
-    aspect-ratio: 5 / 4;
 }
 
 .tv-skjerm, .tv-ramme {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    /* height: 100%; */
-    object-fit: cover;
-    
 }
 
 .tv-skjerm {
@@ -188,13 +169,11 @@ nav ul li a:hover img {
   left: 10%;
   top: 6%;
   width: 53%;
-  /* height: 80%; */
   image-rendering: auto;
   min-width: 188px;
 }
 .tv-ramme {
   z-index: 2;
-  object-fit: cover;
   min-width: 355px;
 }
 
@@ -205,13 +184,13 @@ nav ul li a:hover img {
 .skills {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 1.2rem;
 }
 
 .skills-skill {
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    padding: 0.5rem;
+    margin-bottom: 1.2rem;
+    margin-right: 1.2rem;
     background: rgba(153,153,153,0.4);
     border-radius: 5px;
     color: #ffffff;
@@ -226,9 +205,9 @@ nav ul li a:hover img {
     box-shadow: 0 4px 8px 0 rgba(0, 183, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.2);
 }
 
-
 .techs-img {
-    width: 32px;
+    width: 2rem;
+    image-rendering: auto;
 }
 
 
@@ -237,40 +216,39 @@ nav ul li a:hover img {
     6. Kontaktinformasjon og lenker til sosiale medier
 -------------------------------------------- */
 
-.box3 h4 {
+footer h4 {
     align-items: center;
     display: flex;
     gap: 30px;
 }
 
-a {
+footer a {
     text-decoration: none;
     color: rgb(80, 150, 255);
 }
 
-a:hover {
+footer a:hover, .box2 a:hover {
     text-decoration: underline;
 }
 
-.box3 a img {
-    width: 32px;
+footer a img {
+    width: 2rem;
     transition: transform 0.2s ease-in-out;
     image-rendering: auto;
 }
-.box3 a img:hover {
+footer a img:hover {
     transform: scale(1.1);
 }
 
 
 /*------------------------------------
-    7. Topp-listene + Card
+    7. Hobbyer
 ------------------------------------*/
+/* Topp-listene + Card */
 .favoritter {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 1.5rem;
-    justify-content: center;
-    /* align-items: stretch; */
 }
 
 .favoritt-card {
@@ -289,11 +267,10 @@ a:hover {
 
 .favoritt-card img {
     width: 100%;
-    height: 10rem;
+    height: 12rem;
     object-fit: contain;
     border-radius: 5px;
     image-rendering: auto;
-    display: block;
 }
 
 .favoritt-card p {
@@ -301,6 +278,18 @@ a:hover {
     font-size: 1rem;
 }
 
+/* soundcloud */
+.musikk-container {
+    padding: 10px 0;
+}
+
+.musikk-container h3, .musikk-container p {
+    margin: 0;
+}
+
+.soundcloud {
+    margin-top: 1rem;
+}
 
 /*------------------------------------
   Animasjoner
@@ -328,37 +317,29 @@ a:hover {
 @media (max-width: 1650px) {
     .favoritter {
         grid-template-columns: repeat(2, minmax(10rem, 1fr));
-        align-items: center;
-        justify-content: center;
     }
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1375px) {
     .tv-container {
-        height: 300px;
+        height: 20rem;
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
     .box {
-        max-height: 600px;
+        max-height: 30rem;
     }
+    .tv-container {
+        height: 5rem;
+    }
+
 }
 
 @media (max-width: 850px) {
     .main-box {
         min-width: 786px;
     }
+
+    
 } 
-
-@media (max-width: 810px) {
-    .tv-skjerm {
-        margin: 0 15px;
-    }
-}
-
-@media (max-width: 585px) {
-    #header-wrapper {
-        min-width: 528px;
-    }
-}
